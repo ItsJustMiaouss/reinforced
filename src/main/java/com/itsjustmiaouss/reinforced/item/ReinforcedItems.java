@@ -3,7 +3,6 @@ package com.itsjustmiaouss.reinforced.item;
 import com.itsjustmiaouss.reinforced.Reinforced;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -23,7 +22,7 @@ public class ReinforcedItems {
         return Registry.register(Registries.ITEM, new Identifier(Reinforced.MOD_ID, identifier), item);
     }
 
-    public static void registerItems() {
+    public static void register() {
         Reinforced.LOGGER.info("Registered items");
     }
 

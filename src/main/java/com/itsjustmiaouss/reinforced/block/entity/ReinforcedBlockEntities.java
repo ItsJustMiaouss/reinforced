@@ -8,9 +8,6 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
 
 public class ReinforcedBlockEntities {
 
@@ -30,7 +27,7 @@ public class ReinforcedBlockEntities {
         );
     }
 
-    public static void registerBlockEntities() {
+    public static void register() {
         Reinforced.LOGGER.info("Registered block entities");
     }
 

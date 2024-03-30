@@ -36,7 +36,7 @@ public class ReinforcedBlocks {
         return registeredBlock;
     }
 
-    public static void registerBlocks() {
+    public static void register() {
         Reinforced.LOGGER.info("Registered blocks");
     }
 
