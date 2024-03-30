@@ -3,5 +3,6 @@
   "item.reinforced.breaker": "Breaker",
 
   "block.reinforced.reinforced_stone": "Reinforced Stone",
-  "block.reinforced.reinforced_cobblestone": "Reinforced Cobblestone"
+  "block.reinforced.reinforced_stone_bricks": "Reinforced Stone Bricks",
+  "block.reinforced.reinforced_deepslate_bricks": "Reinforced Deepslate Bricks"
 }
