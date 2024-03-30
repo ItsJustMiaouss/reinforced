@@ -3,6 +3,7 @@ package com.itsjustmiaouss.reinforced;
 import com.itsjustmiaouss.reinforced.block.ReinforcedBlocks;
 import com.itsjustmiaouss.reinforced.block.entity.ReinforcedBlockEntities;
 import com.itsjustmiaouss.reinforced.item.ReinforcedItems;
+import com.itsjustmiaouss.reinforced.item.itemgroup.ReinforcedItemGroups;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,8 +15,9 @@ public class Reinforced implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ReinforcedItems.registerItems();
-		ReinforcedBlocks.registerBlocks();
-		ReinforcedBlockEntities.registerBlockEntities();
+		ReinforcedItems.register();
+		ReinforcedBlocks.register();
+		ReinforcedBlockEntities.register();
+		ReinforcedItemGroups.register();
 	}
 }
