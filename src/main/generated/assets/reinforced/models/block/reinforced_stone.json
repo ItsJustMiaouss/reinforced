@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "reinforced:block/reinforced_stone_bottom",
+    "side": "reinforced:block/reinforced_stone_side",
+    "top": "reinforced:block/reinforced_stone_top"
+  }
+}
