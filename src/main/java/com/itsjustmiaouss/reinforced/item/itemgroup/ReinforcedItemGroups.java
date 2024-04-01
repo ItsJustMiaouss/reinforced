@@ -18,7 +18,6 @@ public class ReinforcedItemGroups {
             .displayName(Text.translatable("itemGroup.reinforced.reinforced"))
             .entries((displayContext, entries) -> {
                 entries.add(ReinforcedItems.REINFORCER_ITEM);
-                entries.add(ReinforcedItems.BREAKER_ITEM);
                 entries.add(ReinforcedBlocks.REINFORCED_STONE);
                 entries.add(ReinforcedBlocks.REINFORCED_STONE_BRICKS);
                 entries.add(ReinforcedBlocks.REINFORCED_DEEPSLATE_BRICKS);

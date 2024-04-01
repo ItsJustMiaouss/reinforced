@@ -13,10 +13,6 @@ public class ReinforcedItems {
             "reinforcer",
             new ReinforcerItem(new FabricItemSettings().maxCount(1).maxDamage(1000))
     );
-    public static final Item BREAKER_ITEM = registerItem(
-            "breaker",
-            new BreakerItem(new FabricItemSettings().maxCount(1).maxDamage(1000))
-    );
 
     private static Item registerItem(String identifier, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Reinforced.MOD_ID, identifier), item);
