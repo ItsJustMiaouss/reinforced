@@ -1,9 +1,13 @@
 package com.itsjustmiaouss.reinforced.block.entity;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.util.math.BlockPos;
 import org.jetbrains.annotations.Nullable;
 
@@ -21,6 +25,8 @@ public class ReinforcedBlockEntity extends BlockEntity {
     public void setOwner(PlayerEntity owner) {
         this.ownerUuid = owner.getUuid();
         this.ownerPlayer = owner.getName().getString();
+
+        updateListeners();
     }
 
     @Nullable
@@ -51,5 +57,23 @@ public class ReinforcedBlockEntity extends BlockEntity {
 
         this.ownerUuid = nbt.getUuid("ownerUuid");
         this.ownerPlayer = nbt.getString("ownerPlayer");
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientPlayPacketListener> toUpdatePacket() {
+        return BlockEntityUpdateS2CPacket.create(this);
+    }
+
+    @Override
+    public NbtCompound toInitialChunkDataNbt() {
+        return createNbt();
+    }
+
+    private void updateListeners() {
+        this.markDirty();
+        if (this.world != null) {
+            this.world.updateListeners(this.getPos(), this.getCachedState(), this.getCachedState(), Block.NOTIFY_ALL);
+        }
     }
 }
