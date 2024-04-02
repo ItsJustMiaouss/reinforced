@@ -6,7 +6,7 @@ The reinforced blocks are not sensible to the wither, ender dragon, explosions a
 
 > This mod is currently being developped. Breaks may occur.
 
-### 📷 Screenshot(s) (from the protorype)
+### 📷 Screenshot(s) (from the prototype)
 
 ![2024-03-29_03 35 41](https://github.com/ItsJustMiaouss/reinforced/assets/59478524/aeab4588-148a-493e-92a5-ad1dd44863f1)
 
