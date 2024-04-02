@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "reinforced:reinforced_stone",
+    "reinforced:reinforced_deepslate_bricks",
+    "reinforced:reinforced_stone_bricks"
+  ]
+}

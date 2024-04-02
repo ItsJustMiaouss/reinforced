@@ -1,4 +1,6 @@
-// 1.20.4	2024-03-29T03:30:45.3929276	Reinforced/Tags for minecraft:block
+// 1.20.4	2024-04-02T01:41:54.522634	Reinforced/Tags for minecraft:block
+c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\mineable\pickaxe.json
 c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\occludes_vibration_signals.json
 c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\dragon_immune.json
 c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\wither_immune.json
+c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\needs_diamond_tool.json
