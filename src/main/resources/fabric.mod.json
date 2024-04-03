@@ -15,9 +15,6 @@
 		"main": [
 			"com.itsjustmiaouss.reinforced.Reinforced"
 		],
-		"client": [
-			"com.itsjustmiaouss.reinforced.ReinforcedClient"
-		],
 		"fabric-datagen": [
 			"com.itsjustmiaouss.reinforced.data.ReinforcedDataGenerator"
 		]
