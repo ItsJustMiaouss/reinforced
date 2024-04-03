@@ -4,7 +4,7 @@ This mod adds reinforced blocks like the [SecurityCraft](https://github.com/Gefo
 
 The reinforced blocks are not sensible to the wither, ender dragon, explosions and pistons. They also occult the sculk signals like a wool block.
 
-> This mod is currently being developped. Breaks may occur.
+> This mod is currently being developed. Breaks may occur.
 
 ### 📷 Screenshot(s) (from the prototype)
 
