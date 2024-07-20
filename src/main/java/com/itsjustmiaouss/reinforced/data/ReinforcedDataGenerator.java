@@ -13,5 +13,6 @@ public class ReinforcedDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(TagGenerator::new);
         pack.addProvider(ModelProvider::new);
         pack.addProvider(LootTableProvider::new);
+        pack.addProvider(RecipesGenerator::new);
     }
 }
