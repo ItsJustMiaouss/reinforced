@@ -25,6 +25,6 @@ public class ReinforcedItemGroups {
             .build();
 
     public static ItemGroup register() {
-        return Registry.register(Registries.ITEM_GROUP, new Identifier(Reinforced.MOD_ID, "reinforced_group"), REINFORCED_ITEM_GROUP);
+        return Registry.register(Registries.ITEM_GROUP, Reinforced.of("reinforced_group"), REINFORCED_ITEM_GROUP);
     }
 }

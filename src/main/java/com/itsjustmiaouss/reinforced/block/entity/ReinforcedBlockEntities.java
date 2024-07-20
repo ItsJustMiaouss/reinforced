@@ -22,7 +22,7 @@ public class ReinforcedBlockEntities {
     private static BlockEntityType<ReinforcedBlockEntity> registerReinforcedBlockEntity(Block... block) {
         return Registry.register(
                 Registries.BLOCK_ENTITY_TYPE,
-                new Identifier(Reinforced.MOD_ID, "reinforced_block_entity"),
+                Reinforced.of("reinforced_block_entity"),
                 FabricBlockEntityTypeBuilder.create(ReinforcedBlockEntity::new, block).build()
         );
     }

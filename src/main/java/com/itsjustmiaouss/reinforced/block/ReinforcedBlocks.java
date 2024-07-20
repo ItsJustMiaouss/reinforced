@@ -28,8 +28,8 @@ public class ReinforcedBlocks {
     }
 
     private static Block registerBlock(String identifier, Block block) {
-        Block registeredBlock = Registry.register(Registries.BLOCK, new Identifier(Reinforced.MOD_ID, identifier), block);
-        Registry.register(Registries.ITEM, new Identifier(Reinforced.MOD_ID, identifier), new BlockItem(registeredBlock, new FabricItemSettings()));
+        Block registeredBlock = Registry.register(Registries.BLOCK, Reinforced.of(identifier), block);
+        Registry.register(Registries.ITEM, Reinforced.of(identifier), new BlockItem(registeredBlock, new FabricItemSettings()));
 
         reinforcedBlocks.add(registeredBlock);
 

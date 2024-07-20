@@ -15,7 +15,7 @@ public class ReinforcedItems {
     );
 
     private static Item registerItem(String identifier, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier(Reinforced.MOD_ID, identifier), item);
+        return Registry.register(Registries.ITEM, Reinforced.of(identifier), item);
     }
 
     public static void register() {

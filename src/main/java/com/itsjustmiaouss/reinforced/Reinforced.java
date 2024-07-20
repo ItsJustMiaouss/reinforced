@@ -7,6 +7,7 @@ import com.itsjustmiaouss.reinforced.item.ReinforcedItems;
 import com.itsjustmiaouss.reinforced.item.itemgroup.ReinforcedItemGroups;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,5 +24,9 @@ public class Reinforced implements ModInitializer {
 		ReinforcedItemGroups.register();
 
 		AttackBlockCallback.EVENT.register(new AttackBlockEvent());
+	}
+
+	public static Identifier of(String path) {
+		return new Identifier(Reinforced.MOD_ID, path);
 	}
 }
