@@ -1,6 +1,6 @@
-// 1.20.4	2024-07-21T00:20:39.1035762	Reinforced/Tags for minecraft:block
-c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\mineable\pickaxe.json
-c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\occludes_vibration_signals.json
-c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\dragon_immune.json
-c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\wither_immune.json
-c044bc911c422e4a6466f90c8114d20b94321ce3 data\minecraft\tags\blocks\needs_diamond_tool.json
+// 1.20.4	2024-08-27T18:50:11.0512886	Reinforced/Tags for minecraft:block
+92562fa28c129bf34e9b655b127315c45485024c data\minecraft\tags\blocks\mineable\pickaxe.json
+92562fa28c129bf34e9b655b127315c45485024c data\minecraft\tags\blocks\occludes_vibration_signals.json
+92562fa28c129bf34e9b655b127315c45485024c data\minecraft\tags\blocks\dragon_immune.json
+92562fa28c129bf34e9b655b127315c45485024c data\minecraft\tags\blocks\wither_immune.json
+92562fa28c129bf34e9b655b127315c45485024c data\minecraft\tags\blocks\needs_diamond_tool.json

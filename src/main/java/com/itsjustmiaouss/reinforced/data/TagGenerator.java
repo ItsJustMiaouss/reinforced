@@ -1,6 +1,5 @@
 package com.itsjustmiaouss.reinforced.data;
 
-import com.itsjustmiaouss.reinforced.block.AbstractReinforcedBlock;
 import com.itsjustmiaouss.reinforced.block.ReinforcedBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -17,9 +16,7 @@ class TagGenerator extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        ReinforcedBlocks.getReinforcedBlocks().stream()
-                .filter(filteredBlock -> filteredBlock instanceof AbstractReinforcedBlock)
-                .map(filteredBlock -> (AbstractReinforcedBlock) filteredBlock)
+        ReinforcedBlocks.getReinforcedBlocks()
                 .forEach(abstractReinforcedBlock -> {
                     this.getOrCreateTagBuilder(BlockTags.WITHER_IMMUNE).add(abstractReinforcedBlock).setReplace(false);
                     this.getOrCreateTagBuilder(BlockTags.DRAGON_IMMUNE).add(abstractReinforcedBlock).setReplace(false);

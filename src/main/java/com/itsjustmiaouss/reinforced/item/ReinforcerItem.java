@@ -14,8 +14,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.ArrayList;
 import java.util.Optional;
+import java.util.Set;
 
 public class ReinforcerItem extends Item {
 
@@ -34,13 +34,10 @@ public class ReinforcerItem extends Item {
 
         if (player == null) return ActionResult.PASS;
 
-        ArrayList<Block> reinforcedBlocks = ReinforcedBlocks.getReinforcedBlocks();
+        Set<AbstractReinforcedBlock> reinforcedBlocks = ReinforcedBlocks.getReinforcedBlocks();
 
         Optional<AbstractReinforcedBlock> reinforcedBlock = reinforcedBlocks.stream()
-                .filter(filteredBlock ->
-                        filteredBlock instanceof AbstractReinforcedBlock b && b.asOriginalBlock().equals(block)
-                )
-                .map(filteredBlock -> (AbstractReinforcedBlock) filteredBlock)
+                .filter(abstractReinforcedBlock -> abstractReinforcedBlock.asOriginalBlock().equals(block))
                 .findFirst();
 
         if (reinforcedBlock.isEmpty()) return ActionResult.PASS;

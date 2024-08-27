@@ -9,28 +9,48 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ReinforcedBlocks {
 
-    private static final ArrayList<Block> reinforcedBlocks = new ArrayList<>();
+    private static final Set<AbstractReinforcedBlock> reinforcedBlocks = new HashSet<>();
 
-    public static final Block REINFORCED_STONE = registerBlock("reinforced_stone", new ReinforcedStone());
-    public static final Block REINFORCED_DEEPSLATE_BRICKS = registerBlock("reinforced_deepslate_bricks", new ReinforcedBlock(Blocks.DEEPSLATE_BRICKS));
-    public static final Block REINFORCED_STONE_BRICKS = registerBlock("reinforced_stone_bricks", new ReinforcedBlock(Blocks.STONE_BRICKS));
+    public static final Block REINFORCED_STONE = registerReinforcedBlock("reinforced_stone", new ReinforcedStone());
+    public static final Block REINFORCED_DEEPSLATE_BRICKS = registerReinforcedBlock("reinforced_deepslate_bricks", new ReinforcedBlock(Blocks.DEEPSLATE_BRICKS));
+    public static final Block REINFORCED_STONE_BRICKS = registerReinforcedBlock("reinforced_stone_bricks", new ReinforcedBlock(Blocks.STONE_BRICKS));
 
-    @NotNull
-    public static ArrayList<Block> getReinforcedBlocks() {
+    /**
+     * Get a Set of the registered reinforced blocks.
+     *
+     * @return An instance of {@link AbstractReinforcedBlock}.
+     */
+    public static Set<AbstractReinforcedBlock> getReinforcedBlocks() {
         return reinforcedBlocks;
     }
 
+    /**
+     * Register a Reinforced Block, an instance of {@link AbstractReinforcedBlock}.
+     */
+    private static Block registerReinforcedBlock(String identifier, AbstractReinforcedBlock block) {
+        registerBlock(identifier, block);
+
+        try {
+            reinforcedBlocks.add(block);
+        } catch (RuntimeException e) {
+            Reinforced.LOGGER.error("Failed to register reinforced block '{}'", identifier);
+        }
+
+        return block;
+    }
+
+    /**
+     * Register a classic block.
+     */
     private static Block registerBlock(String identifier, Block block) {
         Block registeredBlock = Registry.register(Registries.BLOCK, Reinforced.of(identifier), block);
         Registry.register(Registries.ITEM, Reinforced.of(identifier), new BlockItem(registeredBlock, new FabricItemSettings()));
-
-        reinforcedBlocks.add(registeredBlock);
 
         return registeredBlock;
     }

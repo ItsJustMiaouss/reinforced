@@ -1,6 +1,5 @@
 package com.itsjustmiaouss.reinforced.data;
 
-import com.itsjustmiaouss.reinforced.block.AbstractReinforcedBlock;
 import com.itsjustmiaouss.reinforced.block.ReinforcedBlocks;
 import com.itsjustmiaouss.reinforced.block.reinforced.SilkTouchable;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -15,9 +14,7 @@ class LootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        ReinforcedBlocks.getReinforcedBlocks().stream()
-                .filter(filteredBlock -> filteredBlock instanceof AbstractReinforcedBlock)
-                .map(filteredBlock -> (AbstractReinforcedBlock) filteredBlock)
+        ReinforcedBlocks.getReinforcedBlocks()
                 .forEach(abstractReinforcedBlock -> {
                     LootTable.Builder drops = abstractReinforcedBlock instanceof SilkTouchable
                             ? this.drops(abstractReinforcedBlock.asOriginalBlock(),
